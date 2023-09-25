@@ -10,7 +10,7 @@ do
   for CHROM in `seq 1 22`
   do
       echo "bcftools view -S ${POP}_gan.txt --min-ac 1:minor -m2 -M2 -v snps -Oz -o ${POP}.chr${CHROM}${SUFFIX} ALL.chr${CHROM}${SUFFIX}"
-      bcftools view -S ${POP}_gan.txt --min-ac 1:minor -m2 -M2 -v snps -Oz -o ${POP}.chr${CHROM}${SUFFIX} ALL.chr${CHROM}${SUFFIX}
+      bcftools view -S ${POP}_samples.txt --min-ac 1:minor -m2 -M2 -v snps -Oz -o ${POP}.chr${CHROM}${SUFFIX} ALL.chr${CHROM}${SUFFIX}
   done
 
   # then merge into one vcf
